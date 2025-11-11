@@ -16,6 +16,7 @@
     /****Other colors*****/
     --light: #FFF5F3;
     --dark: #103741;
+    --footer-background:#020d25; /** #010d19;***/
 }
 
 .back-to-top {
@@ -58,6 +59,9 @@ a:hover{
 }
 .bg-light{
     background-color: var(--primary-background-light) !important;
+}
+.bg-dark{
+    background-color: var(--footer-background) !important;
 }
 
 
