@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://itdepartment658-hue.github.io/bbia_v1/</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://itdepartment658-hue.github.io/bbia_v1/about.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://itdepartment658-hue.github.io/bbia_v1/programs.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://itdepartment658-hue.github.io/bbia_v1/facilities.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://itdepartment658-hue.github.io/bbia_v1/teachers.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://itdepartment658-hue.github.io/bbia_v1/contact.html</loc>
+    <lastmod>2025-11-11</lastmod>
+    <priority>0.70</priority>
+  </url>
+</urlset>

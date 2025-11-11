@@ -1,2 +1,6 @@
 https://pagespeed.web.dev/ - test speed of website
 
+https://squoosh.app/ - images compressor
+
+https://search.google.com/search-console/ - GOGOGLE SEO
+
