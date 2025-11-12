@@ -5,3 +5,12 @@ https://squoosh.app/ - images compressor
 https://search.google.com/search-console/ - GOGOGLE SEO
 
 https://colorlib.com/ - inspiration website
+
+
+libraries
+ npm install animate.css --save - css animation 
+ npm install animejs - js animation
+ npm intall gsap - js animations
+
+communities
+https://dev.to/bybydev/top-10-javascript-animation-libraries-1km7
