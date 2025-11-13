@@ -16,12 +16,13 @@
     /****Other colors*****/
     --light: #FFF5F3;
     --dark: #103741;
-    --footer-background:#020d25; /** #010d19;***/
+    --footer-background: #0d395f;/**#020d25;  #010d19;***/
+
 }
 body{
     background-color: hsl(214, 100%, 98%);
+    
 }
-
 .back-to-top {
     position: fixed;
     display: none;
@@ -77,7 +78,10 @@ a:hover{
 .btn.btn-primary {
     color: #FFFFFF;
 }
-
+.btn-outline-primary{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
 .btn-square {
     width: 38px;
     height: 38px;
@@ -605,7 +609,58 @@ blockquote {
   font-size: 25px; 
   font-weight: bold;
 }
+/***News and events***/
 
+#school-news h2 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary-color);
+    }
+
+    #school-news h3 {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-top: 2rem;
+    }
+
+    .news-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .news-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .news-img img {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .news-card:hover .news-img img {
+      transform: scale(1.1);
+    }
+
+    .news-card .card-body {
+      padding: 1.5rem;
+    }
+
+    .news-card .btn-outline-primary {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+      transition: 0.3s;
+    }
+
+    .news-card .btn-outline-primary:hover {
+      background-color: var(--primary-color);
+      color: #fff;
+      border-color: var(--primary-color);
+    }
 
 /*** Footer ***/
 .footer .btn.btn-social {
