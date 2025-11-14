@@ -8,10 +8,10 @@
     --primary-background-light: hsl(214, 43%, 96%);
 
     /***Secondary******/
-    --secondary-color:hsl(221, 84%, 27%);
-    --secondary-color-hover: hsl(228, 84%, 27%);
-    --secondary-disable:hsl(221, 84%, 27%);
-    --secondary-box-shadow: 0 0 0 .25rem hsla(221, 84%, 27%, 0.502);
+    --secondary-color: #fff;
+    --secondary-color-hover: hsl(221, 58%, 94%);
+    --secondary-disable:hsl(0, 0%, 73%);
+    --secondary-box-shadow: 0 0 0 .25rem hsla(220, 66%, 58%, 0.502);
 
     /****Other colors*****/
     --light: #FFF5F3;
@@ -67,8 +67,12 @@ a:hover{
 .bg-dark{
     background-color: var(--footer-background) !important;
 }
-
-
+.text-view{
+    color:#fff;
+}
+p{
+    font-size: 1rem;
+}
 /*** Button ***/
 .btn {
     font-weight: 500;
@@ -128,22 +132,22 @@ box-shadow:var(--primary-box-shadow)
 }
 
 .btn-dark{
-    color:#fff;
+    color: var(--primary-color);
     background-color:var(--secondary-color);
     border-color:var(--secondary-color);
 }
 .btn-dark:hover{
-    color:#fff;
+    color: var(--primary-color);
     background-color:var(--secondary-color-hover);
     border-color:var(--secondary-color-hover);
 }.btn-check:focus+.btn-dark,.btn-dark:focus{
-    color:#fff;
+    color: var(--primary-color);
     background-color:var(--secondary-color);
     border-color:var(--secondary-color);
     box-shadow:var(--secondary-box-shadow);
 }
 .btn-check:checked+.btn-dark,.btn-check:active+.btn-dark,.btn-dark:active,.btn-dark.active,.show>.btn-dark.dropdown-toggle{
-    color:#fff;
+    color: var(--primary-color);
     background-color:var(--secondary-colorr);
     border-color:var(--secondary-color);
 }
@@ -151,7 +155,7 @@ box-shadow:var(--primary-box-shadow)
     box-shadow:var(--secondary-box-shadow);
 }
 .btn-dark:disabled,.btn-dark.disabled{
-    color:#fff;
+    color: var(--primary-color);
     background-color:var(--secondary-disable);
     border-color:var(--secondary-disable);
 }
@@ -441,7 +445,9 @@ h6,
 .about-img img:hover {
     background: var(--primary-color) !important;
 }
-
+.text-content{
+    font-size: 1rem;
+}
 /* About Page Styles */
 .milestone-card {
   background: var(--primary-background-light);
@@ -661,7 +667,188 @@ blockquote {
       color: #fff;
       border-color: var(--primary-color);
     }
+/** program*/
 
+
+.section-title {
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+      }
+
+      .step-card {
+        background-color: #0e3a7c;
+        border: none;
+        border-radius: 20px;
+        color: white;
+        padding: 1.5rem;
+        height: 100%;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .step-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+      }
+
+      .icon-circle {
+        background-color: #ffffff;
+        color: var(--primary-color);
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 1.4rem;
+        flex-shrink: 0;
+      }
+
+      h5 {
+        font-weight: 600;
+        margin-bottom: 0.3rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        margin-bottom: 0;
+        opacity: 0.9;
+      }
+
+      /* New styles for approach cards */
+      .approach-card {
+        color: #212529; /* Dark text color */
+        border-radius: 10px;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .approach-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+      }
+
+      .approach-card i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: var(--primary-color)
+      }
+
+      .approach-card h5 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      .approach-card p {
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      /* Responsive tweaks */
+      @media (max-width: 991.98px) {
+        .step-card {
+          flex-direction: row;
+          padding: 1.2rem;
+        }
+        .icon-circle {
+          width: 45px;
+          height: 45px;
+          font-size: 1.2rem;
+        }
+      } 
+
+      /* WHY CHOOSE OUR SCHOOL */
+.choose-section {
+padding: 70px 0;
+text-align: center;
+}
+.title{
+    color: var(--primary-color)
+}
+.sub-title{
+    color: var(--secondary-color)
+}
+.choose-card {
+background: var(--primary-background-light);
+border-radius: 15px;
+padding: 30px 20px;
+transition: 0.3s;
+height: 100%;
+}
+
+.choose-card:hover {
+background: var(--primary-color);
+color: var(--text-light);
+transform: translateY(-6px);
+}
+.choose-card:hover p, .choose-card:hover h5{
+    color: #fff;
+}
+.choose-card i {
+font-size: 2rem;
+margin-bottom: 10px;
+color: var(--primary-color);
+transition: 0.3s;
+}
+
+.choose-card:hover i {
+color: #fff;
+}
+
+/**Facilities**/
+    .facility-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 10px !important;
+    }
+
+    .facility-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .facility-card:hover img {
+      transform: scale(1.1);
+      border-radius: 10px !important;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      opacity: 0;
+      transition: 0.3s ease;
+      border-radius: 10px !important;
+    }
+
+    .facility-card:hover .overlay {
+      opacity: 1;
+    
+    }
+    .zoom-facilities{
+      width: 100%;
+      height:360px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    .facility-card .zoom-facilities{
+        transform: scale(0.5);
+      border-radius: 10px !important;
+    }
 /*** Footer ***/
 .footer .btn.btn-social {
     margin-right: 5px;
@@ -739,3 +926,26 @@ blockquote {
 .form-control:focus{
     box-shadow:var(--primary-box-shadow) !important;
 }
+
+/**Board of Directors **/
+
+.bod-card {
+    background: var(--primary-background-light);
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    height: 100%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    flex-direction: column;
+  }
+
+  .bod-card img {
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .bod-card:hover img{
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+  }
