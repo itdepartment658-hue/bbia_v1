@@ -1,5 +1,8 @@
-User-agent: *
-Allow: /
+user-agent: *
+disallow: /downloads/
+
+user-agent: magicsearchbot
+disallow: /uploads/
 
 # Sitemap location
 Sitemap: https://itdepartment658-hue.github.io/bbia_v1/sitemap.xml
