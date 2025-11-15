@@ -5,152 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Events Carousel</title>
   <style>
-    body {
-      background: #f4f4f4;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
+    .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
 
-    .carousel-container {
-      width: 90%;
-      max-width: 900px;
-      margin: auto;
-      overflow: hidden;
-      position: relative;
-    }
+video {
+    width: 100%;
+    display: block;
+    pointer-events: none; /* blocks play/pause edits */
+}
 
-    .carousel {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: transparent; 
+    z-index: 2;
+    pointer-events: all; /* blocks clicks */
+}
 
-    .slide {
-      min-width: 100%;
-      position: relative;
-      border-radius: 12px;
-      overflow: hidden;
-    }
-
-    .slide img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Hover Overlay */
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transition: 0.3s ease;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .slide:hover .overlay {
-      opacity: 1;
-    }
-
-    .overlay h2 {
-      margin-bottom: 8px;
-      font-size: 28px;
-    }
-    .overlay p {
-      font-size: 18px;
-      margin: 0;
-    }
-
-    /* Buttons */
-    .btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      font-size: 20px;
-      cursor: pointer;
-      border-radius: 50%;
-    }
-    .btn:hover {
-      background: rgba(0, 0, 0, 0.8);
-    }
-
-    #prev {
-      left: 10px;
-    }
-    #next {
-      right: 10px;
-    }
   </style>
 </head>
 <body>
 
-  <h1>Events Carousel</h1>
+  <div class="video-container">
+    <video id="protectedVideo" autoplay muted loop playsinline>
+      <source src="videos/me.mp4" type="video/mp4">
+        <source src="videos/movie.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
+</div>
 
-  <div class="carousel-container">
-    <button class="btn" id="prev">&#10094;</button>
-    <button class="btn" id="next">&#10095;</button>
-
-    <div class="carousel" id="carousel">
-      <div class="slide">
-        <img src="event1.jpg" alt="Event 1" />
-        <div class="overlay">
-          <h2>Event Title 1</h2>
-          <p>Date: January 15, 2025</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="event2.jpg" alt="Event 2" />
-        <div class="overlay">
-          <h2>Event Title 2</h2>
-          <p>Date: February 20, 2025</p>
-        </div>
-      </div>
-
-      <div class="slide">
-        <img src="event3.jpg" alt="Event 3" />
-        <div class="overlay">
-          <h2>Event Title 3</h2>
-          <p>Date: March 12, 2025</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <script>
-    const carousel = document.getElementById('carousel');
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-
-    let index = 0;
-
-    document.getElementById('next').addEventListener('click', () => {
-      index = (index + 1) % totalSlides;
-      updateCarousel();
-    });
-
-    document.getElementById('prev').addEventListener('click', () => {
-      index = (index - 1 + totalSlides) % totalSlides;
-      updateCarousel();
-    });
-
-    function updateCarousel() {
-      carousel.style.transform = `translateX(-${index * 100}%)`;
-    }
-  </script>
 </body>
 </html>

@@ -800,6 +800,9 @@ transition: 0.3s;
 .choose-card:hover i {
 color: #fff;
 }
+.h-max{
+    max-height: 550px;
+}
 
 /**Facilities**/
     .facility-card {
@@ -948,6 +951,10 @@ color: #fff;
     object-fit: cover;
   }
   .bod-card:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+  }
+  .zoom:hover img{
     transform: scale(1.05);
     transition: 0.5s ease-in-out;
   }
